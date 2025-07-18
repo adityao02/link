@@ -62,20 +62,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'www.tokopedia.com', port: '', pathname: '/**' },
       { protocol: 'https', hostname: 'www.youtube.com', port: '', pathname: '/**' },
       { protocol: 'https', hostname: 'yastatic.net', port: '', pathname: '/**' },
-      { protocol: 'https', hostname: '*.behance.net', port: '', pathname: '/**' },
-      { protocol: 'https', hostname: '*.canva.com', port: '', pathname: '/**' },
-      { protocol: 'https', hostname: '*.cdninstagram.com', port: '', pathname: '/**' },
-      { protocol: 'https', hostname: '*.fbcdn.net', port: '', pathname: '/**' },
-      { protocol: 'https', hostname: '*.google.com', port: '', pathname: '/**' },
-      { protocol: 'https', hostname: '*.redd.it', port: '', pathname: '/**' },
-    ].sort((a, b) => {
-      // Sort wildcard hostnames to the end, then alphabetically
-      const isAWildcard = a.hostname.startsWith('*.');
-      const isBWildcard = b.hostname.startsWith('*.');
-      if (isAWildcard && !isBWildcard) return 1;
-      if (!isAWildcard && isBWildcard) return -1;
-      return a.hostname.localeCompare(b.hostname);
-    }),
+    ],
   },
 };
 
